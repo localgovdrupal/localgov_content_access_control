@@ -4,5 +4,5 @@ description: Creates access control mechanisms so specific editors can only edit
 package: LocalGov Drupal
 core_version_requirement: ^9 || ^10
 dependencies:
-  - workbench
-  - workbench_access
+  - workbench:workbench
+  - workbench_access:workbench_access
