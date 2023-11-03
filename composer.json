@@ -1,0 +1,12 @@
+{
+  "name": "localgovdrupal/localgov_content_access_control",
+  "description": "Creates access control mechanisms so specific editors can only edit specific sections of the website.",
+  "type": "drupal-module",
+  "homepage": "https://github.com/localgovdrupal/localgov_content_access_control",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/workbench": "^1.4",
+    "drupal/workbench_access": "^2.0"
+  }
+}

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.localgov_subsites_overview.localgov_access_control
+    - field.field.node.localgov_subsites_page.localgov_access_control
+    - taxonomy.vocabulary.access_control
+id: site_section
+plural_label: 'Site Sections'
+label: 'Site Section'
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - access_control
+  fields:
+    -
+      entity_type: node
+      bundle: localgov_subsites_overview
+      field: localgov_access_control
+    -
+      entity_type: node
+      bundle: localgov_subsites_page
+      field: localgov_access_control

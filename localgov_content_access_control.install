@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the LocalGov Content Access Control module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function localgov_content_access_control_install() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+
+  // Get a list of all user roles
+  // Set the workbench access permissions for each role.
+  $roles = \Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple();
+  foreach ($roles as $role) {
+    // We don't want to give anonymous users or general authenticated users
+    // access to the workbench access system.
+    if ($role->id() != 'anonymous' && $role->id() != 'authenticated') {
+      $role->grantPermission('use workbench access');
+      $role->grantPermission('access workbench');
+      $role->grantPermission('view workbench access information');
+      $role->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function localgov_content_access_control_uninstall() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}

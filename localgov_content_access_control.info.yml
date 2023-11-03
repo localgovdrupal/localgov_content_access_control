@@ -1,0 +1,8 @@
+name: LocalGov Content Access Control
+type: module
+description: Creates access control mechanisms so specific editors can only edit specific sections of the website.
+package: LocalGov Drupal
+core_version_requirement: ^9 || ^10
+dependencies:
+  - workbench
+  - workbench_access
