@@ -1,5 +1,7 @@
 # LocalGov Content Access Control
 
+Thanks to Essex County Council for funding this module.
+
 This module adds access control to your LGD site sections, which allows you to restrict editing/publishing/etc actions to subsets of users.
 
 It uses the workbench_access module as its base.
@@ -45,4 +47,7 @@ If there are other content types you want to add it to you can follow the same p
 
 ### Add editors to site sections
 
-Finally, you can go to the workbench access settings to define which users are assigned to which site sections. This can be found at `/admin/config/workflow/workbench_access`. We have created one "Scenario" called "Site Section" which uses the "Access Control" taxonomy. You can add more scenarios if you need them (you probably won't).
+Finally, you can go to the workbench access settings to define which users are assigned to which site sections. This can be found at `/admin/config/workflow/workbench_access`. We have created one "Scenario" called "Site Section" which uses the "Access Control" taxonomy. You can add more scenarios if you need them (you probably won't). Click on "Site Section" and then on the next page beside each site section click the link for "Editors" to manually add each editor to each site section.
+
+#### Role based access
+When on the "Site Sections" page, you will also notice a link beside each site section for "Role". Using this interface allows you to add _all editors_ with a certain role to a site section. For example, you might add all editors with the "News editor" role to the "News" section in our sample taxonomy above.
